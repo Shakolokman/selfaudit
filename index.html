@@ -171,7 +171,7 @@ h2{font-size:calc(var(--u)*4);letter-spacing:.05em;color:var(--bone);line-height
       </section>
 
       <!-- 2 · Method wheel -->
-      <section class="slide method" aria-label="The Diamond Eye Method">
+      <section class="slide method" aria-label="The Presence Compass">
         <svg id="wheel" viewBox="0 0 1600 900" role="img" aria-label="Executive presence: three problems, three outcomes, nine skills"></svg>
       </section>
 
@@ -237,16 +237,16 @@ h2{font-size:calc(var(--u)*4);letter-spacing:.05em;color:var(--bone);line-height
 (function(){
   /* ---------- data ---------- */
   var PILLARS = [
-    {outcome:["Grounded & Assertive","Presence"], outcomeFull:"Grounded & Assertive Presence", problem:"Overthinking & Self-Doubt"},
-    {outcome:["Charismatic & Impactful","Communication"], outcomeFull:"Charismatic & Impactful Communication", problem:"Overlooked & Dismissed"},
-    {outcome:["Navigate Politics &","Build Network"], outcomeFull:"Navigate Politics & Build Network", problem:"Isolated & Unconnected"}
+    {outcome:["Grounded Presence"], outcomeFull:"Grounded Presence", problem:"Overthinking & Self-Doubt"},
+    {outcome:["Magnetic Communication"], outcomeFull:"Magnetic Communication", problem:"Overlooked & Dismissed"},
+    {outcome:["Strategic Influence"], outcomeFull:"Strategic Influence", problem:"Isolated & Disconnected"}
   ];
   var SKILLS = [
-    {n:"Emotional Stability", p:0, a:335, lab:{x:649,y:[72,111],anchor:"end",lines:["Emotional","Stability"]},
+    {n:"Composure Under Pressure", p:0, a:335, lab:{x:649,y:[72,111],anchor:"end",lines:["Composure","Under Pressure"]},
      watch:"Executive Communication → Emotional Intelligence",
      drill:"When tension rises, pause, take one slow breath and name the feeling before you respond.",
      rep:"After any tense moment this week, write down what triggered you and how you handled it."},
-    {n:"Unshakable Confidence", p:0, a:300, lab:{x:491,y:[250,289],anchor:"end",lines:["Unshakable","Confidence"]},
+    {n:"Self-Trust", p:0, a:300, lab:{x:491,y:[282],anchor:"end",lines:["Self-Trust"]},
      watch:"Five Pillars of Communication → Confidence and Authenticity",
      drill:"Each morning, write the one thing you would normally hold back in today’s meetings.",
      rep:"Say it. Speak in the first ten minutes of every meeting."},
@@ -262,7 +262,7 @@ h2{font-size:calc(var(--u)*4);letter-spacing:.05em;color:var(--bone);line-height
      watch:"Social Mastery → vocal projection",
      drill:"Read aloud for five minutes a day. Downward tone at the end, pause at every full stop.",
      rep:"In your next presentation, speak to the back of the room."},
-    {n:"Concise & Precise Delivery", p:1, a:95, lab:{x:1154,y:[459,499],anchor:"start",lines:["Concise &","Precise Delivery"]},
+    {n:"Clear Delivery", p:1, a:95, lab:{x:1154,y:[459,499],anchor:"start",lines:["Clear","Delivery"]},
      watch:"Executive Presence Accelerator → Strategic Silence",
      drill:"Practise three-sentence updates: the point, the reason, the next step.",
      rep:"Cut your next update in half before you give it. Answer first."},
@@ -309,14 +309,14 @@ h2{font-size:calc(var(--u)*4);letter-spacing:.05em;color:var(--bone);line-height
   function arc(r,a1,a2,ccw){var p1=pt(r,a1),p2=pt(r,a2),d=ccw?((a1-a2+360)%360):((a2-a1+360)%360);
     return "M"+f(p1[0])+" "+f(p1[1])+" A"+r+" "+r+" 0 "+(d>180?1:0)+" "+(ccw?0:1)+" "+f(p2[0])+" "+f(p2[1]);}
   var GEOM=[
-    {ring:[247,353], ticks:[282.5,317.5], thin:[255,345,176], prob:{r:188,a:[240,360]}, out:[{r:268,a:[235,365]},{r:239,a:[235,365]}]},
-    {ring:[7,113],   ticks:[42.5,77.5],   thin:[15,105,176],  prob:{r:188,a:[0,120]},   out:[{r:268,a:[-5,125]},{r:239,a:[-5,125]}]},
-    {ring:[127,233], ticks:[162.5,197.5], thin:[135,225,192], prob:{r:182,a:[245,115],ccw:true}, out:[{r:234,a:[245,115],ccw:true},{r:272,a:[245,115],ccw:true}]}
+    {ring:[247,353], ticks:[282.5,317.5], thin:[255,345,176], prob:{r:188,a:[240,360]}, out:[{r:258,a:[235,365]}]},
+    {ring:[7,113],   ticks:[42.5,77.5],   thin:[15,105,176],  prob:{r:188,a:[0,120]},   out:[{r:258,a:[-5,125]}]},
+    {ring:[127,233], ticks:[162.5,197.5], thin:[135,225,192], prob:{r:182,a:[245,115],ccw:true}, out:[{r:256,a:[245,115],ccw:true}]}
   ];
   function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;");}
   function buildWheel(){
     var h=[], defs=[];
-    h.push('<text class="g-title" x="96" y="690">THE DIAMOND EYE METHOD</text>');
+    h.push('<text class="g-title" x="96" y="690">THE PRESENCE COMPASS</text>');
     h.push('<text class="g-sub" x="96" y="728">Three problems. Three outcomes.</text><text class="g-sub" x="96" y="760">Nine skills.</text>');
     h.push('<circle class="g-core2" cx="'+CX+'" cy="'+CY+'" r="135"/><circle class="g-core" cx="'+CX+'" cy="'+CY+'" r="122"/>');
     h.push('<text class="g-center" text-anchor="middle" x="'+CX+'" y="'+(CY-8)+'">EXECUTIVE</text><text class="g-center" text-anchor="middle" x="'+CX+'" y="'+(CY+31)+'">PRESENCE</text>');
